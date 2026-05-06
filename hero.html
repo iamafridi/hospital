@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VitalTrack BD - Know Before You Go</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003921",
+                        "on-secondary-fixed": "#002111",
+                        "on-secondary-fixed-variant": "#005232",
+                        "surface-container": "#151f37",
+                        "on-primary": "#003543",
+                        "on-background": "#d9e2ff",
+                        "surface-container-low": "#101b33",
+                        "on-primary-fixed-variant": "#004e60",
+                        "primary-fixed-dim": "#47d6ff",
+                        "tertiary": "#ffd79f",
+                        "tertiary-fixed": "#ffddb1",
+                        "surface-container-highest": "#2a344e",
+                        "surface-bright": "#2f3952",
+                        "on-surface": "#d9e2ff",
+                        "surface-tint": "#47d6ff",
+                        "primary": "#a5e7ff",
+                        "outline-variant": "#3c494e",
+                        "secondary": "#46e099",
+                        "on-secondary-container": "#00452a",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bbc9cf",
+                        "secondary-fixed-dim": "#46e099",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#68fdb3",
+                        "primary-fixed": "#b6ebff",
+                        "inverse-surface": "#d9e2ff",
+                        "background": "#07122a",
+                        "inverse-primary": "#00677f",
+                        "on-primary-container": "#00566a",
+                        "on-tertiary-fixed": "#291800",
+                        "secondary-container": "#00bd7a",
+                        "surface-dim": "#07122a",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#859399",
+                        "surface-variant": "#2a344e",
+                        "on-primary-fixed": "#001f28",
+                        "tertiary-fixed-dim": "#ffba48",
+                        "surface-container-high": "#1f2942",
+                        "surface-container-lowest": "#030d25",
+                        "inverse-on-surface": "#263049",
+                        "surface": "#07122a",
+                        "on-tertiary-container": "#6c4700",
+                        "tertiary-container": "#ffb227",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "primary-container": "#00d2ff",
+                        "on-tertiary": "#442b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "container-margin": "20px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "data-heavy": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-heavy": ["40px", { "lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface-container/60 backdrop-blur-[40px] sticky top-0 w-full z-50 border-b border-white/10 shadow-xl">
+<div class="flex justify-between items-center w-full px-gutter py-md max-w-7xl mx-auto z-50">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-lg font-black text-primary-fixed tracking-tight">VitalTrack BD</span>
+</div>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-primary-fixed-dim transition-colors duration-300 active:scale-95 duration-150 ease-in-out" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300 active:scale-95 duration-150 ease-in-out" href="#">Live Map</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300 active:scale-95 duration-150 ease-in-out" href="#">Compare</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300 active:scale-95 duration-150 ease-in-out" href="#">Analytics</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300 active:scale-95 duration-150 ease-in-out" href="#">About</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">EN/BN</button>
+<button class="bg-error text-on-error font-label-sm text-label-sm px-4 py-2 rounded-full font-bold shadow-[0_0_15px_rgba(255,180,171,0.4)] animate-pulse flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">call</span>
+                    Emergency Hotline
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow relative w-full overflow-hidden">
+<!-- Abstract Tech Background -->
+<div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(circle at 50% 0%, rgba(0,210,255,0.05) 0%, transparent 70%);"></div>
+<div class="max-w-7xl mx-auto px-gutter py-xl relative z-10">
+<!-- Hero Section -->
+<section class="text-center mb-xl">
+<h1 class="font-display-xl text-display-xl text-on-background mb-sm">Know Before You <span class="text-primary">Go</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real-time intensive care unit and hospital bed availability across Bangladesh. Powered by DGHS live data streams.</p>
+</section>
+<!-- Search & Filter Bar -->
+<section class="max-w-4xl mx-auto mb-xl">
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 p-sm rounded-xl flex flex-col md:flex-row gap-sm items-center shadow-lg">
+<div class="flex-grow flex items-center bg-surface-container-low border border-outline-variant rounded-lg px-sm py-xs w-full focus-within:border-primary-container focus-within:ring-1 focus-within:ring-primary-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-xs">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-background w-full placeholder:text-on-surface-variant/50" placeholder="Search hospitals by name..." type="text"/>
+</div>
+<div class="flex gap-sm w-full md:w-auto">
+<select class="bg-surface-container-low border border-outline-variant rounded-lg px-sm py-xs text-body-md font-body-md text-on-background focus:border-primary-container focus:ring-1 focus:ring-primary-container appearance-none w-full md:w-48">
+<option>All Districts</option>
+<option>Dhaka</option>
+<option>Chittagong</option>
+<option>Sylhet</option>
+<option>Rajshahi</option>
+</select>
+<label class="flex items-center gap-xs cursor-pointer bg-surface-container-low border border-outline-variant rounded-lg px-sm py-xs whitespace-nowrap hover:bg-surface-container-high transition-colors">
+<input class="rounded bg-background border-outline-variant text-primary-container focus:ring-primary-container focus:ring-offset-background w-4 h-4" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-background">ICU Only</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Stat Cards -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-md mb-xl">
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-sm">Total Hospitals</span>
+<span class="font-data-heavy text-data-heavy text-primary">1,240+</span>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-sm">Available ICU Beds</span>
+<span class="font-data-heavy text-data-heavy text-secondary">42</span>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-error-container/50 rounded-xl p-md flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-error/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider mb-sm flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                        Critical Hospitals
+                    </span>
+<span class="font-data-heavy text-data-heavy text-error">18</span>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-sm">Divisions Covered</span>
+<span class="font-data-heavy text-data-heavy text-tertiary">8</span>
+</div>
+</section>
+<!-- Hospital Grid -->
+<section>
+<div class="flex justify-between items-end mb-md">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Live Availability</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">sync</span> Last updated: Just now
+                    </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Card 1: Green Status -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col hover:border-white/20 transition-colors shadow-lg group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">Evercare Hospital</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-secondary leading-none">12</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-secondary flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span> Available</span>
+<span class="text-on-surface-variant">38% Free</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 62%"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Red Status (Critical) -->
+<div class="bg-surface-container/80 backdrop-blur-[40px] border border-error/30 rounded-xl p-md flex flex-col shadow-[0_0_20px_rgba(147,0,10,0.2)] group relative overflow-hidden">
+<div class="absolute inset-0 bg-error/5 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-sm relative z-10">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">Dhaka Medical College</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-error leading-none">0</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto relative z-10">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-error font-bold flex items-center gap-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+                                    At Capacity
+                                </span>
+<span class="text-on-surface-variant">100% Full</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-error h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Amber Status -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col hover:border-white/20 transition-colors shadow-lg group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">Square Hospital</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-tertiary leading-none">2</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-tertiary flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Limited</span>
+<span class="text-on-surface-variant">90% Full</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+<!-- Card 4: Green Status -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col hover:border-white/20 transition-colors shadow-lg group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">Labaid Specialized</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-secondary leading-none">5</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-secondary flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span> Available</span>
+<span class="text-on-surface-variant">75% Full</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+<!-- Card 5: Red Status -->
+<div class="bg-surface-container/80 backdrop-blur-[40px] border border-error/30 rounded-xl p-md flex flex-col shadow-[0_0_20px_rgba(147,0,10,0.1)] group relative overflow-hidden">
+<div class="flex justify-between items-start mb-sm relative z-10">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">Kurmitola General</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-error leading-none">0</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto relative z-10">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-error font-bold flex items-center gap-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+                                    At Capacity
+                                </span>
+<span class="text-on-surface-variant">100% Full</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-error h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Card 6: Amber Status -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col hover:border-white/20 transition-colors shadow-lg group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background line-clamp-1">BSMMU</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Dhaka
+                                </p>
+</div>
+<div class="text-right">
+<span class="font-data-heavy text-[32px] text-tertiary leading-none">1</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-xs">ICU Beds</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label-sm text-label-sm mb-xs">
+<span class="text-tertiary flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Limited</span>
+<span class="text-on-surface-variant">95% Full</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width py-xl mt-auto border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-gutter max-w-7xl mx-auto">
+<div class="flex flex-col gap-sm">
+<span class="text-headline-sm font-headline-sm text-primary">VitalTrack BD</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 VitalTrack BD. Data sourced from DGHS Bangladesh.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Emergency Contacts</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed-dim transition-all group flex items-center gap-xs" href="#">
+<span class="w-2 h-2 rounded-full bg-error opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all"></span>
+                    999 Emergency
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed-dim transition-all group flex items-center gap-xs" href="#">
+<span class="w-2 h-2 rounded-full bg-tertiary opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all"></span>
+                    333 National Helpline
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed-dim transition-all group flex items-center gap-xs" href="#">
+<span class="w-2 h-2 rounded-full bg-secondary opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all"></span>
+                    16263 Shastho Batayon
+                </a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Legal &amp; Info</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed-dim transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed-dim transition-all" href="#">Data Sources</a>
+</div>
+</div>
+</footer>
+</body></html>

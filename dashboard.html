@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analytics &amp; Insights - VitalTrack BD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003921",
+                        "on-secondary-fixed": "#002111",
+                        "on-secondary-fixed-variant": "#005232",
+                        "surface-container": "#151f37",
+                        "on-primary": "#003543",
+                        "on-background": "#d9e2ff",
+                        "surface-container-low": "#101b33",
+                        "on-primary-fixed-variant": "#004e60",
+                        "primary-fixed-dim": "#47d6ff",
+                        "tertiary": "#ffd79f",
+                        "tertiary-fixed": "#ffddb1",
+                        "surface-container-highest": "#2a344e",
+                        "surface-bright": "#2f3952",
+                        "on-surface": "#d9e2ff",
+                        "surface-tint": "#47d6ff",
+                        "primary": "#a5e7ff",
+                        "outline-variant": "#3c494e",
+                        "secondary": "#46e099",
+                        "on-secondary-container": "#00452a",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bbc9cf",
+                        "secondary-fixed-dim": "#46e099",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#68fdb3",
+                        "primary-fixed": "#b6ebff",
+                        "inverse-surface": "#d9e2ff",
+                        "background": "#07122a",
+                        "inverse-primary": "#00677f",
+                        "on-primary-container": "#00566a",
+                        "on-tertiary-fixed": "#291800",
+                        "secondary-container": "#00bd7a",
+                        "surface-dim": "#07122a",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#859399",
+                        "surface-variant": "#2a344e",
+                        "on-primary-fixed": "#001f28",
+                        "tertiary-fixed-dim": "#ffba48",
+                        "surface-container-high": "#1f2942",
+                        "surface-container-lowest": "#030d25",
+                        "inverse-on-surface": "#263049",
+                        "surface": "#07122a",
+                        "on-tertiary-container": "#6c4700",
+                        "tertiary-container": "#ffb227",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "primary-container": "#00d2ff",
+                        "on-tertiary": "#442b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "container-margin": "20px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "data-heavy": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-heavy": ["40px", { "lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container/60 backdrop-blur-[40px] docked full-width top-0 sticky border-b border-white/10 shadow-xl z-50">
+<div class="flex justify-between items-center w-full px-gutter py-md max-w-7xl mx-auto z-50">
+<div class="text-headline-md font-headline-lg font-black text-primary-fixed tracking-tight">VitalTrack BD</div>
+<div class="hidden md:flex space-x-md">
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Live Map</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Compare</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold" href="#">Analytics</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center space-x-sm">
+<button class="bg-error-container text-on-error-container px-4 py-2 rounded font-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+                    Emergency Hotline
+                </button>
+<button class="text-on-surface-variant font-label-sm border border-outline-variant px-3 py-2 rounded">
+                    EN/BN
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-gutter py-lg flex flex-col gap-lg">
+<!-- Header -->
+<header>
+<h1 class="font-display-xl text-display-xl text-primary-fixed">Analytics &amp; Insights</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Real-time bed availability distribution across Bangladesh divisions.</p>
+</header>
+<!-- Summary Stat Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Most Critical -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex items-center justify-between shadow-lg">
+<div>
+<h3 class="font-label-sm text-label-sm text-error">MOST CRITICAL DIVISION</h3>
+<p class="font-headline-md text-headline-md mt-xs">Rajshahi</p>
+</div>
+<div class="text-right">
+<p class="font-data-heavy text-data-heavy text-error">12</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Beds Available</p>
+</div>
+</div>
+<!-- Most Available -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex items-center justify-between shadow-lg">
+<div>
+<h3 class="font-label-sm text-label-sm text-secondary">HIGHEST AVAILABILITY</h3>
+<p class="font-headline-md text-headline-md mt-xs">Sylhet</p>
+</div>
+<div class="text-right">
+<p class="font-data-heavy text-data-heavy text-secondary">345</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Beds Available</p>
+</div>
+</div>
+</section>
+<!-- Main Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Left Column: Map & Charts -->
+<div class="lg:col-span-2 flex flex-col gap-lg">
+<!-- Choropleth Heatmap Placeholder -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl overflow-hidden h-[400px] relative shadow-lg">
+<img alt="Choropleth heatmap of Bangladesh divisions showing bed availability density" class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A highly detailed data visualization map of Bangladesh displayed on a high-tech digital screen. The map functions as a choropleth heatmap, using deep navy blues and bright cyan accents to indicate density and distribution. The aesthetic is ultra-modern, glassmorphic, and data-heavy, fitting perfectly within an advanced health analytics dashboard. Lighting is striking with subtle glows around critical map regions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA88vmh2meaAx70eMTIOqJEggy6fA6Lok2kS8ixKXuv0tz2YM3HErsdEkrdktJ4JwhRFhdy7FZ1DJxmIJZ-ierdK347k_3CER4BSZJXkrj2D4V9GePYPqvb_ovyVxrshwQcyhz-Zey1ss-avYeDAhrLdSDPyjNVCB5zt4ztZqgEDhSqOzlC9IZ1C99fzOTdqsWJqYlNR50zgagofO1bnAbfX0GvpADlBzUvxFCOiuQwxbJmz55KfO4kH22qv6kqKQgp6-7lY_-T3BgW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h2 class="font-headline-md text-headline-md text-primary-fixed shadow-md">Regional Density Map</h2>
+</div>
+</div>
+<!-- Side-by-Side Charts -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md h-[300px]">
+<!-- Bar Chart: Beds by Division -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col shadow-lg">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-md uppercase tracking-widest">Beds by Division</h3>
+<div class="flex-grow flex items-end justify-between space-x-xs pb-sm">
+<div class="w-full bg-primary/20 hover:bg-primary/40 rounded-t h-[80%] relative group transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 font-label-sm text-primary">Dhaka</div>
+</div>
+<div class="w-full bg-error/40 hover:bg-error/60 rounded-t h-[10%] relative group transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 font-label-sm text-error">Raj</div>
+</div>
+<div class="w-full bg-secondary/30 hover:bg-secondary/50 rounded-t h-[60%] relative group transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 font-label-sm text-secondary">Syl</div>
+</div>
+<div class="w-full bg-primary/20 hover:bg-primary/40 rounded-t h-[40%] relative group transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 font-label-sm text-primary">Ctg</div>
+</div>
+</div>
+</div>
+<!-- Line Chart: 7-Day Trend -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col shadow-lg">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-md uppercase tracking-widest">7-Day Trend</h3>
+<div class="flex-grow relative">
+<!-- Decorative line to simulate chart trend -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path class="text-primary" d="M0,80 L20,60 L40,70 L60,30 L80,40 L100,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-primary/10" d="M0,100 L0,80 L20,60 L40,70 L60,30 L80,40 L100,10 L100,100 Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Shortage Alert Feed -->
+<div class="lg:col-span-1 bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col shadow-lg h-[724px]">
+<div class="flex items-center justify-between mb-lg border-b border-white/10 pb-sm">
+<h2 class="font-headline-md text-headline-md">Shortage Alerts</h2>
+<span class="bg-error/20 text-error px-2 py-1 rounded font-label-sm animate-pulse">Live</span>
+</div>
+<div class="flex-grow overflow-y-auto space-y-md pr-sm custom-scrollbar">
+<!-- Alert Item -->
+<div class="flex gap-sm items-start relative before:absolute before:left-3 before:top-8 before:bottom-[-24px] before:w-px before:bg-white/10 last:before:hidden">
+<div class="w-6 h-6 rounded-full bg-error-container border border-error flex items-center justify-center shrink-0 z-10">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+</div>
+<div>
+<div class="font-label-sm text-on-surface-variant">2 mins ago</div>
+<div class="font-body-md font-semibold text-error mt-xs">ICU Capacity Reached</div>
+<div class="font-label-sm text-on-surface-variant mt-xs">Rajshahi Medical College Hospital reporting 0 available ICU beds.</div>
+</div>
+</div>
+<!-- Alert Item -->
+<div class="flex gap-sm items-start relative before:absolute before:left-3 before:top-8 before:bottom-[-24px] before:w-px before:bg-white/10 last:before:hidden">
+<div class="w-6 h-6 rounded-full bg-surface-variant border border-outline-variant flex items-center justify-center shrink-0 z-10">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div>
+<div class="font-label-sm text-on-surface-variant">15 mins ago</div>
+<div class="font-body-md font-semibold text-primary">Ward Beds Low</div>
+<div class="font-label-sm text-on-surface-variant mt-xs">Dhaka Medical College general ward availability below 5%.</div>
+</div>
+</div>
+<!-- Alert Item -->
+<div class="flex gap-sm items-start relative before:absolute before:left-3 before:top-8 before:bottom-[-24px] before:w-px before:bg-white/10 last:before:hidden">
+<div class="w-6 h-6 rounded-full bg-error-container border border-error flex items-center justify-center shrink-0 z-10">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<div>
+<div class="font-label-sm text-on-surface-variant">1 hr ago</div>
+<div class="font-body-md font-semibold text-error mt-xs">Oxygen Depletion</div>
+<div class="font-label-sm text-on-surface-variant mt-xs">Khulna City Hospital requesting immediate oxygen cylinder resupply.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width py-xl mt-auto border-t border-outline-variant/30 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-gutter max-w-7xl mx-auto">
+<div>
+<div class="text-headline-sm font-headline-sm text-primary mb-sm">VitalTrack BD</div>
+<div class="font-body-md text-body-md font-label-sm text-label-sm text-on-surface-variant">
+                    © 2024 VitalTrack BD. Data sourced from DGHS Bangladesh.
+                </div>
+</div>
+<div class="flex flex-col space-y-sm">
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all font-body-md" href="#">Data Sources</a>
+</div>
+<div class="flex flex-col space-y-sm">
+<a class="text-error font-bold flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                    999 Emergency
+                </a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all font-body-md" href="#">333 National Helpline</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all font-body-md" href="#">16263 Shastho Batayon</a>
+</div>
+</div>
+</footer>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(0, 210, 255, 0.3);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 210, 255, 0.5);
+        }
+    </style>
+</body></html>

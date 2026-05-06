@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - VitalTrack BD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003921",
+                        "on-secondary-fixed": "#002111",
+                        "on-secondary-fixed-variant": "#005232",
+                        "surface-container": "#151f37",
+                        "on-primary": "#003543",
+                        "on-background": "#d9e2ff",
+                        "surface-container-low": "#101b33",
+                        "on-primary-fixed-variant": "#004e60",
+                        "primary-fixed-dim": "#47d6ff",
+                        "tertiary": "#ffd79f",
+                        "tertiary-fixed": "#ffddb1",
+                        "surface-container-highest": "#2a344e",
+                        "surface-bright": "#2f3952",
+                        "on-surface": "#d9e2ff",
+                        "surface-tint": "#47d6ff",
+                        "primary": "#a5e7ff",
+                        "outline-variant": "#3c494e",
+                        "secondary": "#46e099",
+                        "on-secondary-container": "#00452a",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bbc9cf",
+                        "secondary-fixed-dim": "#46e099",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#68fdb3",
+                        "primary-fixed": "#b6ebff",
+                        "inverse-surface": "#d9e2ff",
+                        "background": "#07122a",
+                        "inverse-primary": "#00677f",
+                        "on-primary-container": "#00566a",
+                        "on-tertiary-fixed": "#291800",
+                        "secondary-container": "#00bd7a",
+                        "surface-dim": "#07122a",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#859399",
+                        "surface-variant": "#2a344e",
+                        "on-primary-fixed": "#001f28",
+                        "tertiary-fixed-dim": "#ffba48",
+                        "surface-container-high": "#1f2942",
+                        "surface-container-lowest": "#030d25",
+                        "inverse-on-surface": "#263049",
+                        "surface": "#07122a",
+                        "on-tertiary-container": "#6c4700",
+                        "tertiary-container": "#ffb227",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "primary-container": "#00d2ff",
+                        "on-tertiary": "#442b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "container-margin": "20px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "data-heavy": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-heavy": ["40px", {"lineHeight": "1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pulse-ring {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface-container/60 backdrop-blur-[40px] full-width top-0 sticky border-b border-white/10 shadow-xl z-50">
+<div class="flex justify-between items-center w-full px-gutter py-md max-w-7xl mx-auto z-50">
+<!-- Brand -->
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary font-headline-lg" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
+<span class="text-headline-md font-headline-lg font-black text-primary-fixed tracking-tight">VitalTrack BD</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Live Map</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Compare</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed-dim transition-colors duration-300" href="#">Analytics</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-primary-fixed-dim transition-colors duration-300" href="#">About</a>
+</div>
+<!-- Trailing Actions -->
+<div class="hidden lg:flex items-center gap-sm">
+<button class="font-label-sm text-label-sm px-sm py-xs rounded text-on-surface-variant hover:text-primary transition-colors">EN/BN</button>
+<button class="font-label-sm text-label-sm bg-error/10 text-error border border-error/20 px-sm py-xs rounded hover:bg-error/20 transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                    Emergency Hotline
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-gutter py-xl flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="max-w-4xl">
+<h1 class="font-display-xl text-display-xl text-on-surface mb-md">Urgent Precision in Healthcare Logistics.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                VitalTrack BD is a high-stakes data routing system designed to alleviate the critical bottlenecks in emergency bed allocation across Bangladesh. By synthesizing live telemetry from distributed healthcare facilities, we provide a hyper-legible, real-time operating picture for first responders and patients in distress.
+            </p>
+</section>
+<!-- How it Works (3-Step Flow) -->
+<section class="flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">System Architecture</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md relative z-10 hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-sm right-sm font-data-heavy text-data-heavy text-white/5 pointer-events-none">01</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-white/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">dynamic_feed</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Data Ingestion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Automated hooks interface directly with hospital localized databases, streaming capacity metrics via encrypted channels.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md relative z-10 hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-sm right-sm font-data-heavy text-data-heavy text-white/5 pointer-events-none">02</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-white/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-secondary">memory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Real-time Processing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Telemetry is validated and aggregated in our centralized cluster, ensuring millisecond-latency updates across the network.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md relative z-10 hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-sm right-sm font-data-heavy text-data-heavy text-white/5 pointer-events-none">03</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-white/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary-container">radar</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Actionable Output</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Data is rendered into high-contrast dashboards and live maps, enabling instantaneous decision-making during crises.</p>
+</div>
+</div>
+</section>
+<!-- Data Sources Row -->
+<section class="flex flex-col items-center py-md border-y border-white/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-md">Verified Telemetry Partners</span>
+<div class="flex flex-wrap justify-center gap-md opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="px-md py-sm rounded-full bg-surface-variant/50 border border-white/5 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+<span class="font-headline-sm font-bold tracking-tight">DGHS</span>
+</div>
+<div class="px-md py-sm rounded-full bg-surface-variant/50 border border-white/5 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">public</span>
+<span class="font-headline-sm font-bold tracking-tight">WHO Analytics</span>
+</div>
+<div class="px-md py-sm rounded-full bg-surface-variant/50 border border-white/5 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">local_hospital</span>
+<span class="font-headline-sm font-bold tracking-tight">National Grid</span>
+</div>
+</div>
+</section>
+<!-- CTA Card: Join the Network -->
+<section class="bg-surface-container/80 backdrop-blur-[40px] border border-primary-container/30 rounded-xl p-lg flex flex-col md:flex-row items-center justify-between gap-md relative overflow-hidden">
+<!-- Decorative Glow -->
+<div class="absolute top-0 right-0 w-[300px] h-[300px] bg-primary-container/10 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="flex-1 z-10">
+<div class="flex items-center gap-sm mb-sm">
+<div class="relative w-3 h-3 rounded-full bg-secondary">
+<div class="absolute inset-0 rounded-full bg-secondary pulse-ring"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Network Expansion</span>
+</div>
+<h2 class="font-display-xl text-display-xl text-on-surface mb-xs">Join the Network.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Hospital administrators: Integrate your facility's live capacity telemetry into the national grid. Enhance public visibility, streamline incoming emergency traffic, and contribute to a resilient healthcare infrastructure.
+                </p>
+</div>
+<div class="z-10 flex-shrink-0">
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-DEFAULT font-label-sm text-label-sm font-bold tracking-wide flex items-center gap-sm hover:bg-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+                    Initiate Integration
+                </button>
+</div>
+</section>
+<!-- Team Section -->
+<section class="flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Core Engineering</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Team Member 1 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-variant mb-md overflow-hidden border-2 border-surface-bright bg-cover bg-center" data-alt="A professional headshot of a software engineer in a dark, high-tech command center environment. The lighting is cool and blue-tinted, reflecting off glass screens, fitting the deep navy 'Urgent Precision' aesthetic of the VitalTrack platform. The engineer wears modern, dark clothing, projecting authority and technical competence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjmsx_Eehuj5xF8wD9lmMUK8QKG4YykcwOm5gFGA2BWcm6vQhyevFNv4Br-pTKWVSMglaSN8H5rhHGOFKZdiLAVbaxRkwDETdTnFJyEwTvAXH4eAm7PiC1YMhG6DaSGbNOb10RI0GjL0O9vzQwzv3ng8TOSXtIDwS0Tn5236tHs9_YasibfySAepoCwzSQl95uBuZ-LPXVq52AhQ5MAK9odyaOwr7y7TMhxut-lRtLCjzdz3NZuPy4JW2t0efuu2DrCqpSH_gg0OE1');"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Tariq Rahman</h3>
+<span class="font-label-sm text-label-sm text-primary mt-xs">Lead Systems Architect</span>
+</div>
+<!-- Team Member 2 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-variant mb-md overflow-hidden border-2 border-surface-bright bg-cover bg-center" data-alt="A portrait of a female data scientist looking focused and intelligent. She is set against a blurred background of deep navy data visualizations and glowing screens. The soft, directed lighting highlights her features while maintaining the high-contrast, dark mode glassmorphic aesthetic of the surrounding UI." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5XFD332gGFEsxG64pOXEQ7SmPlLd8RuyQW1koos0OgJ146cHTSQdEIx7H6xaFv0MJfhP00OohMDaS2y4UxgI-uE_-l-6RnBXqb93rP8PHxK9Heky78FKr54Cvs-WL2sp8BU3XIGCYvJNaZk0a6sJix7LUfRy5pHqi8Uq9yUtipQjpHT8qln9o2SG9WVr8Ra5RLDy2Gf42TMVhdxkSp9r3916CaRLQLjGFoeF4KYciVmfoXuJ4f-UK0flQ0KNfUp829kR3O07H360v');"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ayesha Karim</h3>
+<span class="font-label-sm text-label-sm text-primary mt-xs">Head of Data Science</span>
+</div>
+<!-- Team Member 3 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-variant mb-md overflow-hidden border-2 border-surface-bright bg-cover bg-center" data-alt="A stark, high-contrast portrait of a male infrastructure engineer. The background is a solid deep navy #07122a, ensuring the avatar blends seamlessly into the dark mode UI. Soft rim lighting in electric blue #00d2ff catches the edge of his face and shoulders, conveying a sense of advanced technology and urgent precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPZwb_sWAbyc1wAoH7bx3NBkQLbqsYGuKcIbfQPiG6NsKC7ZhXuH84xLt444LQNPjLV_SydnhYtbBi-848y1hoA57FznUFZNZJRbfjf_ABEobjbKWzzlQYWBAghMagpE5IpnXStuCziPHfbRzDmIzuRo5geib8E1qaf_Kc3apFxUiNBdKhjXd_PLMntVJPkvI_Ag4yRkPyhRwc_9x6HWb4Lz3IR7M8BKQQHjbY7bm31sOb_8Idkp15DVfcMNgWxWlW8yAuhOUvP0NS');"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Rafiq Hossain</h3>
+<span class="font-label-sm text-label-sm text-primary mt-xs">Infrastructure Ops</span>
+</div>
+<!-- Team Member 4 -->
+<div class="bg-surface-container/60 backdrop-blur-[40px] border border-white/10 rounded-xl p-md flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-variant mb-md overflow-hidden border-2 border-surface-bright bg-cover bg-center" data-alt="A focused headshot of a female UX designer specializing in mission-critical interfaces. She is illuminated by the glow of a monitor displaying complex data grids. The scene is saturated with deep blues and stark contrasts, perfectly aligning with the command-center visual identity of the VitalTrack brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-yJq9oClxcHP4IhNV1QIsycEKpenJS12qNKiaa8YO57uVWF3zpwR6FfvBN5trQcj2L12TSCUryKz9A5mP_fxznu5ENpGAHAdQFLvc68xqW_nBNj4B6Tgqyu_Bxsn7pqp4SzL8tXwUkQ5dsPNtz5u2tWTe7SSfwO_iPiy-erkCA2wyJyFXX4iQp-PQlgrXYcNvtHpHvrx0f2Ze9KADqdpWzKtwUIkaa0ezaEkyBXk7P5rShkVAISqoLhqfqtp6KDx2h4T8pch2vwv5');"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Farhana Zaman</h3>
+<span class="font-label-sm text-label-sm text-primary mt-xs">Interface Design</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width py-xl mt-auto border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-gutter max-w-7xl mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-sm">
+<span class="text-headline-sm font-headline-sm text-primary flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
+                    VitalTrack BD
+                </span>
+<p class="font-body-md text-body-md font-label-sm text-label-sm text-on-surface-variant">
+                    © 2024 VitalTrack BD. Data sourced from DGHS Bangladesh.
+                </p>
+</div>
+<!-- Emergency Links -->
+<div class="flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Emergency Contacts</span>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all flex items-center gap-xs" href="#"><span class="material-symbols-outlined text-[16px] text-error">emergency</span> 999 Emergency</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all flex items-center gap-xs" href="#"><span class="material-symbols-outlined text-[16px]">call</span> 333 National Helpline</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all flex items-center gap-xs" href="#"><span class="material-symbols-outlined text-[16px]">local_hospital</span> 16263 Shastho Batayon</a></li>
+</ul>
+</div>
+<!-- Meta Links -->
+<div class="flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Resources</span>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all" href="#">Data Sources</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
