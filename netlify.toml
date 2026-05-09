@@ -1,0 +1,4 @@
+[build]
+  base = "vitaltrack-bd"
+  command = "npm run build"
+  publish = ".next"
